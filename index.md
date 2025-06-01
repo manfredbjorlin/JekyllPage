@@ -3,25 +3,36 @@ layout: default
 title: Home
 ---
 <div class="jump-links">
-  <a href="#recent-presentationsn">Presentations</a>
-  <a href="#events">Events</a>
+  <a href="#recent-presentationsn" class="jump-btn">Presentations</a>
+  <a href="#events" class="jump-btn">Events</a>
 </div>
 <style>
  .jump-links {
   display: flex;
   justify-content: center;
-  gap: 2em;
-  margin-bottom: 1.5em;
-  font-size: 1.1em;
-  margin-top: 1em !important;
-  margin-bottom: 1em !important;
+  gap: 1.2em;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
-.jump-links a {
+.jump-btn {
+  display: inline-block;
+  padding: 0.4em 1.2em;
+  background: #222b33; /* Dark blue-gray, Midnight's navbar color */
+  border: 1px solid #3d4954;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 600;
   text-decoration: none;
-  /*color: inherit;*/
+  transition: background 0.18s, box-shadow 0.18s, color 0.18s;
+  box-shadow: 0 1px 3px rgba(0,0,0,.13);
 }
-section #title {
-   margin-bottom: 0px !important; 
+.jump-btn:hover,
+.jump-btn:focus {
+  background: #3469a0; /* Accent color from Midnight links */
+  border-color: #3469a0;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  text-decoration: none;
 }
 </style>
 
