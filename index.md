@@ -14,6 +14,9 @@ title: Home
   margin-top: 1em;
   margin-bottom: 3em;
 }
+.jump-links a.jump-btn, .jump-links a.jump-btn:visited, .jump-links a.jump-btn:active, .jump-links a.jump-btn:focus, .jump-links a.jump-btn:hover {
+  text-shadow: none !important;
+}
 .jump-btn {
   display: inline-block;
   padding: 0.4em 1.2em;
