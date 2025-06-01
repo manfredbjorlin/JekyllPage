@@ -13,10 +13,11 @@ title: Home
   gap: 2em;
   margin-bottom: 1.5em;
   font-size: 1.1em;
+  margin-top: 2em !important;
 }
 .jump-links a {
   text-decoration: none;
-  color: inherit;
+  /*color: inherit;*/
 }
 </style>
 
