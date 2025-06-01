@@ -3,7 +3,8 @@ layout: default
 title: Home
 ---
 
-# My sessions
+# My events
+Follow my journey of speaking at events
 
 <div id="upcoming-section" style="display:none">
   <h2>Upcoming Events</h2>
@@ -96,10 +97,10 @@ fetch(apiUrl)
 }
 #upcoming-events li, #past-events li {
   margin-bottom: 1.5em;
-  background: #23232d;
+  background: #434343;
   padding: 1em;
   border-radius: 6px;
-  border-left: 3px solid #2fd4ff;
+  border-left: 3px solid #578210;
 }
 #upcoming-events strong, #past-events strong { color: #fff; }
 #upcoming-events span, #past-events span { color: #cfcfcf; }
