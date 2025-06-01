@@ -19,6 +19,13 @@ title: Home
     <div class="gallery-title">Event-Driven Architecture</div>
     <div class="gallery-subtitle">From SMS to Now, Why It Still Matters</div>
   </div>
+  <div class="gallery-item">
+    <a href="https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
+      <img src="{{ '/images/eda-cover.png' | relative_url }}" alt="Train Industry Cover">
+    </a>
+    <div class="gallery-title">Event-Driven Architecture</div>
+    <div class="gallery-subtitle">From SMS to Now, Why It Still Matters</div>
+  </div>
   <!-- Add more presentations as needed -->
 </div>
 
