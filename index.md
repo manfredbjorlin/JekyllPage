@@ -2,10 +2,22 @@
 layout: default
 title: Home
 ---
-<div style="display: flex; gap: 20px; flex-wrap: wrap;">
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600" height="1063" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858" height="1147" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<div class="embeds-row">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="300" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858?collapsed=1" height="265" width="300" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 </div>
+<style>
+  .embeds-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.embeds-row iframe {
+  flex: 1 1 320px;
+  max-width: 400px;
+}
+</style>
 <h2>Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
