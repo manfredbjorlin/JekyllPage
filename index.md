@@ -48,23 +48,50 @@ fetch(apiUrl)
     // Show or hide upcoming events section
     const upcomingSection = document.getElementById("upcoming-section");
     if (upcoming.length) {
-      upcomingSection.style.display = "";
-      document.getElementById('upcoming-events').innerHTML = upcoming.map(ev => `
-        <li>
-          <a href="${ev.website || '#'}" target="_blank" rel="noopener">
-            <strong>${ev.name}</strong>
-          </a>
-          <br>
-          ${ev.location ? `<span>${ev.location}</span><br>` : ""}
-          <span>
-            ${formatDate(ev.eventStartDate)}
-            ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
-          </span>
-        </li>
-      `).join('');
-    } else {
-      upcomingSection.style.display = "none";
+  upcomingSection.style.display = "";
+
+  // Find earliest event
+  let soonestEventIdx = 0;
+  let soonestDate = new Date(upcoming[0].eventStartDate);
+  for (let i=1; i<upcoming.length; ++i) {
+    const d = new Date(upcoming[i].eventStartDate);
+    if (d < soonestDate) {
+      soonestEventIdx = i;
+      soonestDate = d;
     }
+  }
+  // Remove soonest from array for separate rendering
+  const soonest = upcoming.splice(soonestEventIdx, 1)[0];
+
+  document.getElementById('upcoming-events').innerHTML =
+    `<li class="highlight">
+      <a href="${soonest.website || '#'}" target="_blank" rel="noopener">
+        <strong>${soonest.name}</strong>
+      </a>
+      <br>
+      ${soonest.location ? `<span>${soonest.location}</span><br>` : ""}
+      <span>
+        ${formatDate(soonest.eventStartDate)}
+        ${soonest.eventEndDate && soonest.eventEndDate !== soonest.eventStartDate ? " – " + formatDate(soonest.eventEndDate) : ''}
+      </span>
+      <div><em>Next up!</em></div>
+    </li>`
+    + upcoming.map(ev => `
+      <li>
+        <a href="${ev.website || '#'}" target="_blank" rel="noopener">
+          <strong>${ev.name}</strong>
+        </a>
+        <br>
+        ${ev.location ? `<span>${ev.location}</span><br>` : ""}
+        <span>
+          ${formatDate(ev.eventStartDate)}
+          ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
+        </span>
+      </li>
+    `).join('');
+} else {
+  upcomingSection.style.display = "none";
+}
 
     // Always show Past Events
     document.getElementById('past-events').innerHTML = past.length
@@ -104,4 +131,15 @@ fetch(apiUrl)
 }
 #upcoming-events strong, #past-events strong { color: #fff; }
 #upcoming-events span, #past-events span { color: #cfcfcf; }
+  #upcoming-events li.highlight {
+  border-left: 6px solid #ff9800;
+  background: #333844;
+  box-shadow: 0 2px 12px #23232d55;
+}
+#upcoming-events li.highlight em {
+  color: #ff9800;
+  font-weight: bold;
+  font-style: normal;
+  letter-spacing: 1px;
+}
 </style>
