@@ -2,7 +2,10 @@
 layout: default
 title: Home
 ---
-
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600" height="1063" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858" height="1147" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+</div>
 <h2>Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
@@ -11,13 +14,6 @@ title: Home
     </a>
     <div class="gallery-title">I choo-choo-choose you</div>
     <div class="gallery-subtitle">or how to build modern platforms in a 200 year old industry</div>
-  </div>
-  <div class="gallery-item">
-    <a href="https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
-      <img src="{{ '/images/eda-cover.png' | relative_url }}" alt="Train Industry Cover">
-    </a>
-    <div class="gallery-title">Event-Driven Architecture</div>
-    <div class="gallery-subtitle">From SMS to Now, Why It Still Matters</div>
   </div>
   <div class="gallery-item">
     <a href="https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
