@@ -64,31 +64,31 @@ fetch(apiUrl)
   const soonest = upcoming.splice(soonestEventIdx, 1)[0];
 
   document.getElementById('upcoming-events').innerHTML =
-    `<li class="highlight">
-      <a href="${soonest.website || '#'}" target="_blank" rel="noopener">
-        <strong>${soonest.name}</strong>
+  `<li class="highlight">
+    <span class="badge">Next up!</span>
+    <a href="${soonest.website || '#'}" target="_blank" rel="noopener">
+      <strong>${soonest.name}</strong>
+    </a>
+    <br>
+    ${soonest.location ? `<span>${soonest.location}</span><br>` : ""}
+    <span>
+      ${formatDate(soonest.eventStartDate)}
+      ${soonest.eventEndDate && soonest.eventEndDate !== soonest.eventStartDate ? " – " + formatDate(soonest.eventEndDate) : ''}
+    </span>
+  </li>`
+  + upcoming.map(ev => `
+    <li>
+      <a href="${ev.website || '#'}" target="_blank" rel="noopener">
+        <strong>${ev.name}</strong>
       </a>
       <br>
-      ${soonest.location ? `<span>${soonest.location}</span><br>` : ""}
+      ${ev.location ? `<span>${ev.location}</span><br>` : ""}
       <span>
-        ${formatDate(soonest.eventStartDate)}
-        ${soonest.eventEndDate && soonest.eventEndDate !== soonest.eventStartDate ? " – " + formatDate(soonest.eventEndDate) : ''}
+        ${formatDate(ev.eventStartDate)}
+        ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
       </span>
-      <div><em>Next up!</em></div>
-    </li>`
-    + upcoming.map(ev => `
-      <li>
-        <a href="${ev.website || '#'}" target="_blank" rel="noopener">
-          <strong>${ev.name}</strong>
-        </a>
-        <br>
-        ${ev.location ? `<span>${ev.location}</span><br>` : ""}
-        <span>
-          ${formatDate(ev.eventStartDate)}
-          ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
-        </span>
-      </li>
-    `).join('');
+    </li>
+  `).join('');
 } else {
   upcomingSection.style.display = "none";
 }
@@ -141,5 +141,20 @@ fetch(apiUrl)
   font-weight: bold;
   font-style: normal;
   letter-spacing: 1px;
+}
+  #upcoming-events li.highlight .badge {
+  display: inline-block;
+  background-color: #ff9800;
+  color: #23232d;
+  font-weight: bold;
+  font-size: 0.85em;
+  border-radius: 10px;
+  padding: 0.2em 0.7em;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+  letter-spacing: 0.5px;
+  position: relative;
+  top: -2px;
 }
 </style>
