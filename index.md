@@ -2,6 +2,10 @@
 layout: default
 title: Home
 ---
+
+- [Presentations](#recent-presentations)
+- [Events](#events)
+
 <div class="embeds-row">
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
@@ -91,6 +95,7 @@ title: Home
 }
 </style>
 
+<span id="events"></span>
 <div id="upcoming-section" style="display:none">
   <h2>Upcoming Events</h2>
   <ul id="upcoming-events"></ul>
