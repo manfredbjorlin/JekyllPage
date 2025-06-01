@@ -25,6 +25,7 @@ title: Home
   text-decoration: none;
   transition: background 0.18s, box-shadow 0.18s, color 0.18s;
   box-shadow: 0 1px 3px rgba(0,0,0,.13);
+  text-shadow: none !important;
 }
 .jump-btn:hover,
 .jump-btn:focus {
