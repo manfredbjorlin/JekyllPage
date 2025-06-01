@@ -20,7 +20,7 @@ title: Home
   /*color: inherit;*/
 }
 section #title {
-   margin-bottom: opx !important; 
+   margin-bottom: 0px !important; 
 }
 </style>
 
