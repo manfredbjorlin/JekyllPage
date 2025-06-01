@@ -3,8 +3,8 @@ layout: default
 title: Home
 ---
 <div class="embeds-row">
-  <iframe class="li-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-  <iframe class="li-embed" src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 </div>
 <style>
   .embeds-row {
@@ -17,12 +17,8 @@ title: Home
 }
 .embeds-row iframe {
   flex: 1 1 320px;
-  max-width: 400px;
+  max-width: 350px;
 }
-.li-embed {
-    max-width: 450px !important;
-    width: 100% !important;
-  }
 </style>
 <h2>Recent Presentations</h2>
 <div class="gallery">
