@@ -3,8 +3,76 @@ layout: default
 title: Home
 ---
 
-# My events
-Follow my journey of speaking at events
+<h2>My Presentations Gallery</h2>
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="https://slides.manfred.no/choo-choo" target="_blank" rel="noopener">
+      <img src="{{ '/images/choo-choo-cover.jpg' | relative_url }}" alt="AI Talk Cover">
+    </a>
+    <div class="gallery-title">I choo-choo-choose you</div>
+    <div class="gallery-subtitle">or how to build modern platforms in a 200 year old industry</div>
+  </div>
+  <div class="gallery-item">
+    <a href=https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
+      <img src="{{ '/images/eda-cover.jpg' | relative_url }}" alt="Train Industry Cover">
+    </a>
+    <div class="gallery-title">Event-Driven Architecture</div>
+    <div class="gallery-subtitle">From SMS to Now, Why It Still Matters</div>
+  </div>
+  <!-- Add more presentations as needed -->
+</div>
+
+<style>
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5em;
+  margin: 2em 0;
+}
+.gallery-item {
+  background: #23232d;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px #0002;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding-bottom: 0.8em;
+}
+.gallery-item a {
+  display: block;
+  transition: transform 0.13s;
+}
+.gallery-item a:hover img {
+  transform: scale(1.04) rotate(-0.2deg);
+  box-shadow: 0 8px 24px #2fd4ff30;
+}
+.gallery-item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-bottom: 1px solid #222b;
+  background: #18181c;
+  transition: transform 0.13s, box-shadow 0.18s;
+}
+.gallery-title {
+  margin-top: 0.9em;
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.01em;
+}
+.gallery-subtitle {
+  font-size: 0.97em;
+  color: #8adbf8;
+  text-align: center;
+  margin: 0.5em 0 0;
+  opacity: 0.84;
+}
+</style>
 
 <div id="upcoming-section" style="display:none">
   <h2>Upcoming Events</h2>
