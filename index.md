@@ -12,7 +12,7 @@ title: Home
   justify-content: center;
   gap: 1.2em;
   margin-top: 1em;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 .jump-btn {
   display: inline-block;
@@ -33,6 +33,9 @@ title: Home
   color: #fff;
   box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   text-decoration: none;
+}
+section #title {
+  margin-bottom: 5px !important;
 }
 </style>
 
