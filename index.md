@@ -14,7 +14,7 @@ title: Home
 <ul id="past-events"></ul>
 
 <script>
-const apiUrl = "https://sessionize.com/api/v2/YOUR_SPEAKER_ID/view/All"; // Replace with your ID
+const apiUrl = "https://sessionize.com/api/speaker/json/42z601511p"; // Replace with your ID
 
 function formatDate(iso) {
   if (!iso) return '';
