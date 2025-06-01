@@ -2,7 +2,6 @@
 layout: default
 title: Home
 ---
-
 <h2>Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
