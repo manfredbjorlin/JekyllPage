@@ -19,6 +19,9 @@ title: Home
   text-decoration: none;
   /*color: inherit;*/
 }
+section #title {
+   margin-bottom: opx !important; 
+}
 </style>
 
 <div class="embeds-row">
