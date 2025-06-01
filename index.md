@@ -13,7 +13,7 @@ title: Home
     <div class="gallery-subtitle">or how to build modern platforms in a 200 year old industry</div>
   </div>
   <div class="gallery-item">
-    <a href=https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
+    <a href="https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
       <img src="{{ '/images/eda-cover.jpg' | relative_url }}" alt="Train Industry Cover">
     </a>
     <div class="gallery-title">Event-Driven Architecture</div>
