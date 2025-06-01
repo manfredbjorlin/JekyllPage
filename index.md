@@ -2,9 +2,18 @@
 layout: default
 title: Home
 ---
-
-- [Presentations](#recent-presentations)
-- [Events](#events)
+<div class="jump-links">
+  <a href="#recent-presentationsn">Presentations</a>
+  <a href="#events">Events</a>
+</div>
+<style>
+  .jump-links {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 1.5em;
+  font-size: 1.1em;
+}
+</style>
 
 <div class="embeds-row">
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
@@ -24,7 +33,7 @@ title: Home
   max-width: 350px;
 }
 </style>
-<h2>Recent Presentations</h2>
+<h2 id="recent-presentations">Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
     <a href="https://slides.manfred.no/choo-choo" target="_blank" rel="noopener">
