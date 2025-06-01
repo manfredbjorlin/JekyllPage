@@ -23,16 +23,23 @@
           <style>
 .social-bar {
   display: flex;
-  gap: 1.2em;
+  gap: 1.8em;              /* slightly more gap if you want! */
   justify-content: center;
   align-items: center;
   margin-top: 1em;
+  background: transparent !important;
 }
+
 .social-bar a {
   display: inline-block;
-  width: 28px; height: 28px;
-  opacity: 0.82; transition: opacity 0.15s;
+  width: 40px;             /* was 28px - try 40px or larger if you like */
+  height: 40px;
+  /* padding: 4px; add for more clickable area, optional */
+  /* background: #23232d; border-radius: 50%; optional circle background */
+  opacity: 0.84;
+  transition: opacity 0.15s;
 }
+
 .social-bar a:hover { opacity: 1; }
 .social-bar svg { width: 100%; height: 100%; display: block; }
 </style>
