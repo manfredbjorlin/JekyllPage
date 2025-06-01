@@ -62,6 +62,7 @@ section #title {
   max-width: 350px;
 }
 </style>
+<hr>
 <h2 id="recent-presentations">Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
@@ -132,7 +133,7 @@ section #title {
   opacity: 0.84;
 }
 </style>
-
+<hr>
 <span id="events"></span>
 <div id="upcoming-section" style="display:none">
   <h2>Upcoming Events</h2>
