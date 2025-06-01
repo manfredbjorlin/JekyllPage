@@ -3,7 +3,6 @@ layout: default
 title: Home
 ---
 Cloud Native architect and developer with a passion for integration and automation, with more than 20 years experience as a back-end and cloud developer & architect. Feel free to contact me on any on my socials!
-<hr>
 <div class="jump-links">
   <a href="#recent-presentations" class="jump-btn">Presentations</a>
   <a href="#events" class="jump-btn">Events</a>
@@ -44,7 +43,7 @@ section #title {
   margin-bottom: 5px !important;
 }
 </style>
-
+<hr>
 <div class="embeds-row">
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7329044756922105858?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
