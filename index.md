@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<h2>My Presentations Gallery</h2>
+<h2>Recent Presentations</h2>
 <div class="gallery">
   <div class="gallery-item">
     <a href="https://slides.manfred.no/choo-choo" target="_blank" rel="noopener">
