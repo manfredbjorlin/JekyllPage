@@ -13,7 +13,8 @@ title: Home
   gap: 2em;
   margin-bottom: 1.5em;
   font-size: 1.1em;
-  margin-top: 2em !important;
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
 }
 .jump-links a {
   text-decoration: none;
