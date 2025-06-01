@@ -6,17 +6,15 @@ title: Home
 # My sessions
 
 <div id="upcoming-section" style="display:none">
-  ## Upcoming Events
-
+  <h2>Upcoming Events</h2>
   <ul id="upcoming-events"></ul>
 </div>
 
-## Past Events
-
+<h2>Past Events</h2>
 <ul id="past-events"></ul>
 
 <script>
-const apiUrl = "https://sessionize.com/api/speaker/json/42z601511p"; // <-- Replace with your real ID
+const apiUrl = "https://sessionize.com/api/v2/YOUR_SPEAKER_ID/view/All"; // Replace with your ID
 
 function formatDate(iso) {
   if (!iso) return '';
@@ -29,10 +27,9 @@ fetch(apiUrl)
   .then(data => {
     const today = new Date();
     const events = (data.events || []).slice();
-    events.sort((a, b) => new Date(b.eventStartDate) - new Date(a.eventStartDate)); // Most recent first
-
-    const upcoming = [];
-    const past = [];
+    // Sort so most recent events (future or past) come first
+    events.sort((a, b) => new Date(b.eventStartDate) - new Date(a.eventStartDate));
+    const upcoming = [], past = [];
 
     for (const ev of events) {
       const endDate = ev.eventEndDate ? new Date(ev.eventEndDate) : null;
@@ -47,7 +44,7 @@ fetch(apiUrl)
       }
     }
 
-    // Show or hide upcoming section
+    // Show or hide upcoming events section
     const upcomingSection = document.getElementById("upcoming-section");
     if (upcoming.length) {
       upcomingSection.style.display = "";
@@ -60,10 +57,7 @@ fetch(apiUrl)
           ${ev.location ? `<span>${ev.location}</span><br>` : ""}
           <span>
             ${formatDate(ev.eventStartDate)}
-            ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate
-              ? " – " + formatDate(ev.eventEndDate)
-              : ''
-            }
+            ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
           </span>
         </li>
       `).join('');
@@ -71,26 +65,22 @@ fetch(apiUrl)
       upcomingSection.style.display = "none";
     }
 
-    // Render past events as before
-    const pastList = document.getElementById("past-events");
-    pastList.innerHTML = past.length
+    // Always show Past Events
+    document.getElementById('past-events').innerHTML = past.length
       ? past.map(ev => `
-          <li>
-            <a href="${ev.website || '#'}" target="_blank" rel="noopener">
-              <strong>${ev.name}</strong>
-            </a>
-            <br>
-            ${ev.location ? `<span>${ev.location}</span><br>` : ""}
-            <span>
-              ${formatDate(ev.eventStartDate)}
-              ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate
-                ? " – " + formatDate(ev.eventEndDate)
-                : ''
-              }
-            </span>
-          </li>
-        `).join('')
-      : "<li>None</li>";
+        <li>
+          <a href="${ev.website || '#'}" target="_blank" rel="noopener">
+            <strong>${ev.name}</strong>
+          </a>
+          <br>
+          ${ev.location ? `<span>${ev.location}</span><br>` : ""}
+          <span>
+            ${formatDate(ev.eventStartDate)}
+            ${ev.eventEndDate && ev.eventEndDate !== ev.eventStartDate ? " – " + formatDate(ev.eventEndDate) : ''}
+          </span>
+        </li>
+        `).join("")
+      : '<li>None</li>';
   })
   .catch(() => {
     document.getElementById('upcoming-section').style.display = "none";
