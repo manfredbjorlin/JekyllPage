@@ -7,14 +7,14 @@ title: Home
 <div class="gallery">
   <div class="gallery-item">
     <a href="https://slides.manfred.no/choo-choo" target="_blank" rel="noopener">
-      <img src="{{ '/images/choo-choo-cover.jpg' | relative_url }}" alt="AI Talk Cover">
+      <img src="{{ '/images/choo-choo-cover.png' | relative_url }}" alt="AI Talk Cover">
     </a>
     <div class="gallery-title">I choo-choo-choose you</div>
     <div class="gallery-subtitle">or how to build modern platforms in a 200 year old industry</div>
   </div>
   <div class="gallery-item">
     <a href="https://slides.manfred.no/eda-sms-to-now" target="_blank" rel="noopener">
-      <img src="{{ '/images/eda-cover.jpg' | relative_url }}" alt="Train Industry Cover">
+      <img src="{{ '/images/eda-cover.png' | relative_url }}" alt="Train Industry Cover">
     </a>
     <div class="gallery-title">Event-Driven Architecture</div>
     <div class="gallery-subtitle">From SMS to Now, Why It Still Matters</div>
