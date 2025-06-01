@@ -3,8 +3,8 @@ layout: default
 title: Home
 ---
 
-# My Portfolio
+# My sessions
 
-Welcome! This site lists my sessions, contacts, and social feeds
+<script type="text/javascript" src="https://sessionize.com/api/speaker/sessions/42z601511p/0x0x3fb393x"></script>
 
 <!-- You can put HTML or Markdown here -->
