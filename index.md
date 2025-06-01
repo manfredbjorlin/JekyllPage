@@ -2,6 +2,7 @@
 layout: default
 title: Home
 ---
+Cloud Native architect and developer with a passion for integration and automation, with more than 20 years experience as a back-end and cloud developer & architect. Feel free to contact me on any on my socials!
 <div class="jump-links">
   <a href="#recent-presentations" class="jump-btn">Presentations</a>
   <a href="#events" class="jump-btn">Events</a>
