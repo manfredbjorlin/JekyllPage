@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 <div class="jump-links">
-  <a href="#recent-presentationsn" class="jump-btn">Presentations</a>
+  <a href="#recent-presentations" class="jump-btn">Presentations</a>
   <a href="#events" class="jump-btn">Events</a>
 </div>
 <style>
