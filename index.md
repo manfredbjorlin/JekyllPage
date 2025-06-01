@@ -7,11 +7,16 @@ title: Home
   <a href="#events">Events</a>
 </div>
 <style>
-  .jump-links {
+ .jump-links {
   display: flex;
-  gap: 1.5em;
+  justify-content: center;
+  gap: 2em;
   margin-bottom: 1.5em;
   font-size: 1.1em;
+}
+.jump-links a {
+  text-decoration: none;
+  color: inherit;
 }
 </style>
 
