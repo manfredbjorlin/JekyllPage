@@ -59,7 +59,7 @@ section #title {
 }
 .embeds-row iframe {
   flex: 1 1 320px;
-  max-width: 350px;
+  max-width: calc(100vw - 10px);
 }
 </style>
 <hr>
