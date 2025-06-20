@@ -12,7 +12,7 @@ Cloud Native architect and developer with a passion for integration and automati
 <div class="embeds-row">
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7331581446169497600?collapsed=1" height="265" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
   <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7339191739951263744?collapsed=1" height="670" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
-  <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7341728414334078976?collapsed=1" height="543" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+  <!--<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7341728414334078976?collapsed=1" height="543" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>-->
 </div>
 <hr>
 <h2 id="recent-presentations">Recent Presentations</h2>
