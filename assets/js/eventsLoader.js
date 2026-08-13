@@ -40,6 +40,7 @@ function loadEvents(apiUrl) {
         }
         // Remove soonest from array for separate rendering
         const soonest = upcoming.splice(soonestEventIdx, 1)[0];
+        upcoming.reverse();
 
         document.getElementById('upcoming-events').innerHTML =
         `<li class="highlight">
