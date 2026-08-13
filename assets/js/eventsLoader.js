@@ -73,6 +73,7 @@ function loadEvents(apiUrl) {
         upcomingSection.style.display = "none";
       }
 
+      document.getElementById("past-count").innerHTML = "(" + past.length + ")"
       // Always show Past Events
       document.getElementById('past-events').innerHTML = past.length
         ? past.map(ev => `

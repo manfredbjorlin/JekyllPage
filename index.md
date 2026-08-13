@@ -11,7 +11,7 @@ Cloud Native architect and developer with a passion for integration and automati
   <ul id="upcoming-events"></ul>
 </div>
 
-<h2>Past Events</h2>
+<h2>Past Events <span id="past-count"></span></h2>
 <ul id="past-events"></ul>
 
 <script src="/assets/js/formatDate.js"></script>
