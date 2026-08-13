@@ -7,7 +7,7 @@ Cloud Native architect and developer with a passion for integration and automati
 <hr>
 <span id="events"></span>
 <div id="upcoming-section" style="display:none">
-  <h2>Upcoming Events</h2>
+  <h2>Upcoming Events <span id="upcoming-count"></span></h2>
   <ul id="upcoming-events"></ul>
 </div>
 

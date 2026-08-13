@@ -28,6 +28,8 @@ function loadEvents(apiUrl) {
       if (upcoming.length) {
         upcomingSection.style.display = "";
 
+        document.getElementById("upcoming-count").innerHTML = "(" + upcoming.length + ")"
+
         // Find earliest event
         let soonestEventIdx = 0;
         let soonestDate = new Date(upcoming[0].eventStartDate);
