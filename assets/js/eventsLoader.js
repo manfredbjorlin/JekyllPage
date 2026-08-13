@@ -40,7 +40,6 @@ function loadEvents(apiUrl) {
         }
         // Remove soonest from array for separate rendering
         const soonest = upcoming.splice(soonestEventIdx, 1)[0];
-        upcoming.reverse();
 
         document.getElementById('upcoming-events').innerHTML =
         `<li class="highlight">
@@ -55,7 +54,7 @@ function loadEvents(apiUrl) {
             ${soonest.eventEndDate && soonest.eventEndDate !== soonest.eventStartDate ? " – " + window.formatDate(soonest.eventEndDate) : ''}
           </span>
         </li>`
-        + upcoming.map(ev => `
+        + upcoming.reverse().map(ev => `
           <li>
             <a href="${ev.website || '#'}" target="_blank" rel="noopener">
               <strong>${ev.name}</strong>
