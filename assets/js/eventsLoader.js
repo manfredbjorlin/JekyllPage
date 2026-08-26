@@ -56,7 +56,7 @@ function loadEvents(apiUrl) {
       }
 
       // Count label for the details toggle
-      const totalUpcoming = soonest ? upcoming.length + 1 : upcoming.length;
+      const totalUpcoming = upcoming.length;
       const countsEl = document.getElementById('events-toggle-counts');
       if (countsEl) {
         const parts = [];
