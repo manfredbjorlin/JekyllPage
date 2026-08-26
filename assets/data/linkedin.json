@@ -12,6 +12,18 @@
             "externalLink": "https://www.linkedin.com/feed/update/urn:li:share:7478341476251308032",
             "shareMode": "customScheduled",
             "via": "network",
+            "assets": [
+              {
+                "thumbnail": "https://media.licdn.com/dms/image/v2/D4E22AQFIK0SChk-rvg/feedshare-image-high-res/B4EZ8hn8cVJkAU-/0/1782975547693?e=1784764800&v=beta&t=3UvaCFNSJzgJNzF0DpF6ifdSr7w-rTJ2DDsPFw3pty8&expires-ts=1784764800000",
+                "mimeType": "image/jpeg",
+                "source": "https://media.licdn.com/dms/image/v2/D4E22AQFIK0SChk-rvg/feedshare-image-high-res/B4EZ8hn8cVJkAU-/0/1782975547693?e=1784764800&v=beta&t=3UvaCFNSJzgJNzF0DpF6ifdSr7w-rTJ2DDsPFw3pty8&expires-ts=1784764800000",
+                "image": {
+                  "altText": "",
+                  "width": 0,
+                  "height": 0
+                }
+              }
+            ],
             "metrics": [
               {
                 "type": "reactions",
@@ -56,6 +68,7 @@
             "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7477622692087697408",
             "shareMode": "customScheduled",
             "via": "network",
+            "assets": [],
             "metrics": [
               {
                 "type": "reactions",
@@ -100,6 +113,48 @@
             "externalLink": "https://www.linkedin.com/feed/update/urn:li:ugcPost:7463133205513072640",
             "shareMode": "customScheduled",
             "via": "network",
+            "assets": [
+              {
+                "thumbnail": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_thumbnail.jpg",
+                "mimeType": "image/jpeg",
+                "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_thumbnail.jpg",
+                "image": {
+                  "altText": "",
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "thumbnail": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_1_thumbnail.jpg",
+                "mimeType": "image/jpeg",
+                "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_1_thumbnail.jpg",
+                "image": {
+                  "altText": "",
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "thumbnail": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_2_thumbnail.jpg",
+                "mimeType": "image/jpeg",
+                "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_2_thumbnail.jpg",
+                "image": {
+                  "altText": "",
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "thumbnail": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_3_thumbnail.jpg",
+                "mimeType": "image/jpeg",
+                "source": "https://buffer-updates-media-backfill-bucket.s3.amazonaws.com/681cb21fc1c5289835c1cb88/681cb313556664dc1086cbca/6a0f739b3bc8c4a248d69a45_3_thumbnail.jpg",
+                "image": {
+                  "altText": "",
+                  "width": 0,
+                  "height": 0
+                }
+              }
+            ],
             "metrics": [
               {
                 "type": "reactions",

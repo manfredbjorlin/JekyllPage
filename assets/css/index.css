@@ -95,6 +95,106 @@ section #title {
   margin: 0.5em 0 0;
   opacity: 0.84;
 }
+/* LinkedIn Posts */
+#linkedin-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+  margin: 1.5em 0 2em;
+}
+.linkedin-card {
+  background: #23232d;
+  border-radius: 8px;
+  border-left: 4px solid #0a66c2;
+  padding: 1.1em 1.3em 0.9em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.linkedin-text {
+  color: #e0e0e0;
+  font-size: 0.95em;
+  line-height: 1.6;
+  margin: 0 0 0.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.linkedin-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em 0.8em;
+  margin-bottom: 0.8em;
+}
+.linkedin-metric {
+  background: #2e2e3a;
+  border: 1px solid #3d4954;
+  border-radius: 20px;
+  padding: 0.2em 0.75em;
+  font-size: 0.83em;
+  color: #cfcfcf;
+  white-space: nowrap;
+}
+.linkedin-metric strong {
+  color: #fff;
+}
+.linkedin-assets {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 0.8em;
+  max-height: 280px;
+  overflow: hidden;
+  border-radius: 6px;
+  grid-template-columns: 1fr;
+}
+.linkedin-assets--2 {
+  grid-template-columns: 1fr 1fr;
+}
+.linkedin-assets--3 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.linkedin-assets--3 .linkedin-asset-img:first-child {
+  grid-row: span 2;
+}
+.linkedin-assets--4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+.linkedin-asset-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-height: 0;
+}
+.linkedin-assets--1 .linkedin-asset-img {
+  max-height: 280px;
+  object-fit: cover;
+}
+
+.linkedin-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5em;
+}
+.linkedin-timestamp {
+  font-size: 0.8em;
+  color: #888;
+}
+  text-align: right;
+}
+.linkedin-link {
+  color: #4ea8e8;
+  font-size: 0.88em;
+  text-decoration: none;
+  font-weight: 600;
+}
+.linkedin-link:hover {
+  text-decoration: underline;
+  color: #8adbf8;
+}
+
 #upcoming-events, #past-events {
   list-style: none;
   padding: 0;

@@ -5,6 +5,16 @@ title: Home
 Cloud Native architect and developer with a passion for integration and automation, with more than 20 years experience as a back-end and cloud developer & architect. Feel free to contact me on any of my socials!
 <link rel="stylesheet" href="/assets/css/index.css">
 <hr>
+
+<h2>Recent LinkedIn Posts</h2>
+<div id="linkedin-posts"></div>
+
+<script src="/assets/js/linkedinLoader.js"></script>
+<script>
+window.loadLinkedInPosts && window.loadLinkedInPosts('/assets/data/linkedin.json');
+</script>
+
+<hr>
 <span id="events"></span>
 <div id="upcoming-section" style="display:none">
   <h2>Upcoming Events <span id="upcoming-count"></span></h2>
