@@ -33,7 +33,12 @@
 
     var textEl = document.createElement('p');
     textEl.className = 'linkedin-text';
-    textEl.textContent = post.text;
+    var escaped = post.text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\n/g, '<br>');
+    textEl.innerHTML = escaped;
 
     var metricsEl = document.createElement('div');
     metricsEl.className = 'linkedin-metrics';
@@ -61,6 +66,15 @@
     footer.appendChild(link);
 
     card.appendChild(textEl);
+
+    var toggle = document.createElement('button');
+    toggle.className = 'linkedin-read-toggle';
+    toggle.textContent = 'Read more ↓';
+    toggle.addEventListener('click', function () {
+      var expanded = textEl.classList.toggle('expanded');
+      toggle.textContent = expanded ? 'Read less ↑' : 'Read more ↓';
+    });
+    card.appendChild(toggle);
 
     if (post.assets && post.assets.length > 0) {
       var assetsEl = document.createElement('div');

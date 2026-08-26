@@ -157,11 +157,31 @@ section #title {
   color: #e0e0e0;
   font-size: 0.95em;
   line-height: 1.6;
-  margin: 0 0 0.8em;
+  margin: 0 0 0.4em;
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  transition: none;
+}
+.linkedin-text.expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+.linkedin-read-toggle {
+  background: none;
+  border: none;
+  padding: 0 0 0.8em;
+  color: #4ea8e8;
+  font-size: 0.85em;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+}
+.linkedin-read-toggle:hover {
+  color: #8adbf8;
+  text-decoration: underline;
 }
 .linkedin-metrics {
   display: flex;
