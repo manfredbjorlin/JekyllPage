@@ -27,76 +27,86 @@
     return metric.value.toLocaleString();
   }
 
-  function renderPosts(posts) {
-    var container = document.getElementById('linkedin-posts');
-    if (!container) return;
+  function buildCard(post) {
+    var card = document.createElement('div');
+    card.className = 'linkedin-card';
 
-    posts.forEach(function (edge) {
-      var post = edge.node;
-      var card = document.createElement('div');
-      card.className = 'linkedin-card';
+    var textEl = document.createElement('p');
+    textEl.className = 'linkedin-text';
+    textEl.textContent = post.text;
 
-      var textEl = document.createElement('p');
-      textEl.className = 'linkedin-text';
-      textEl.textContent = post.text;
+    var metricsEl = document.createElement('div');
+    metricsEl.className = 'linkedin-metrics';
+    post.metrics.forEach(function (m) {
+      var chip = document.createElement('span');
+      chip.className = 'linkedin-metric';
+      chip.innerHTML = metricIcon(m.type) + ' <strong>' + formatMetricValue(m) + '</strong> ' + m.name;
+      metricsEl.appendChild(chip);
+    });
 
-      var metricsEl = document.createElement('div');
-      metricsEl.className = 'linkedin-metrics';
-      post.metrics.forEach(function (m) {
-        var chip = document.createElement('span');
-        chip.className = 'linkedin-metric';
-        chip.innerHTML = metricIcon(m.type) + ' <strong>' + formatMetricValue(m) + '</strong> ' + m.name;
-        metricsEl.appendChild(chip);
+    var footer = document.createElement('div');
+    footer.className = 'linkedin-footer';
+    if (post.dueAt) {
+      var timeEl = document.createElement('span');
+      timeEl.className = 'linkedin-timestamp';
+      timeEl.textContent = formatDate(post.dueAt);
+      footer.appendChild(timeEl);
+    }
+    var link = document.createElement('a');
+    link.href = post.externalLink;
+    link.target = '_blank';
+    link.rel = 'noopener';
+    link.textContent = 'View on LinkedIn →';
+    link.className = 'linkedin-link';
+    footer.appendChild(link);
+
+    card.appendChild(textEl);
+
+    if (post.assets && post.assets.length > 0) {
+      var assetsEl = document.createElement('div');
+      assetsEl.className = 'linkedin-assets linkedin-assets--' + post.assets.length;
+      var loadedCount = 0;
+      post.assets.forEach(function (asset) {
+        var img = document.createElement('img');
+        img.alt = (asset.image && asset.image.altText) || '';
+        img.className = 'linkedin-asset-img';
+        img.loading = 'lazy';
+        img.onerror = function () {
+          img.remove();
+          loadedCount--;
+          if (assetsEl.children.length === 0) {
+            assetsEl.remove();
+          } else {
+            assetsEl.className = 'linkedin-assets linkedin-assets--' + assetsEl.children.length;
+          }
+        };
+        img.onload = function () { loadedCount++; };
+        assetsEl.appendChild(img);
+        img.src = asset.thumbnail || asset.source;
       });
+      card.appendChild(assetsEl);
+    }
 
-      var footer = document.createElement('div');
-      footer.className = 'linkedin-footer';
-      if (post.dueAt) {
-        var timeEl = document.createElement('span');
-        timeEl.className = 'linkedin-timestamp';
-        timeEl.textContent = formatDate(post.dueAt);
-        footer.appendChild(timeEl);
+    card.appendChild(metricsEl);
+    card.appendChild(footer);
+    return card;
+  }
+
+  function renderPosts(posts) {
+    var latestContainer = document.getElementById('linkedin-latest');
+    var restContainer = document.getElementById('linkedin-posts');
+    var countsEl = document.getElementById('linkedin-toggle-counts');
+    if (countsEl && posts.length > 1) {
+      countsEl.textContent = '(' + (posts.length - 1) + ' more)';
+    }
+
+    posts.forEach(function (edge, idx) {
+      var card = buildCard(edge.node);
+      if (idx === 0 && latestContainer) {
+        latestContainer.appendChild(card);
+      } else if (restContainer) {
+        restContainer.appendChild(card);
       }
-      var link = document.createElement('a');
-      link.href = post.externalLink;
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = 'View on LinkedIn →';
-      link.className = 'linkedin-link';
-      footer.appendChild(link);
-
-      card.appendChild(textEl);
-
-      if (post.assets && post.assets.length > 0) {
-        var assetsEl = document.createElement('div');
-        assetsEl.className = 'linkedin-assets linkedin-assets--' + post.assets.length;
-        var loadedCount = 0;
-        post.assets.forEach(function (asset) {
-          var img = document.createElement('img');
-          img.alt = (asset.image && asset.image.altText) || '';
-          img.className = 'linkedin-asset-img';
-          img.loading = 'lazy';
-          img.onerror = function () {
-            img.remove();
-            loadedCount--;
-            if (assetsEl.children.length === 0) {
-              assetsEl.remove();
-            } else {
-              assetsEl.className = 'linkedin-assets linkedin-assets--' + assetsEl.children.length;
-            }
-          };
-          img.onload = function () {
-            loadedCount++;
-          };
-          assetsEl.appendChild(img);
-          img.src = asset.thumbnail || asset.source;
-        });
-        card.appendChild(assetsEl);
-      }
-
-      card.appendChild(metricsEl);
-      card.appendChild(footer);
-      container.appendChild(card);
     });
   }
 
