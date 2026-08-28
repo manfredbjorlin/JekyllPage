@@ -4,10 +4,10 @@ title: Previous Speaks
 ---
 <link rel="stylesheet" href="/assets/css/index.css">
 
-<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:0.5em;">
-  <h2 style="margin:0;">🎥 Recordings and Slides 📊</h2>
+<div style="text-align:right;margin-bottom:0.25em;">
   <a href="/" class="jump-btn">← Back</a>
 </div>
+<h2>🎥 Recordings and Slides 📊</h2>
 <p>Recordings of past conference talks and presentations.</p>
 
 <div id="youtube-gallery" class="gallery">
