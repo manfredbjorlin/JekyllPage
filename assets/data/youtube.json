@@ -1,0 +1,17 @@
+{
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=7qhbGsBvg4k",
+      "title": "MCP Security: Keep Your AI Agents from Spilling the Tea",
+      "presenters": [
+        { 
+          "name": "Manfred Bjørlin",
+          "url": "https://manfred.no"
+        },
+        {
+          "name": "Awar Abdulkarim",
+          "url": ""
+      ],
+      "thumbnail": "mcp_sec_thumb.jpg"
+  ]
+}
