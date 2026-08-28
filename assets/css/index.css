@@ -139,6 +139,30 @@ section #title {
   margin: 0.5em 0 0;
   opacity: 0.84;
 }
+.gallery-item-subtitle {
+  font-size: 0.9em;
+  color: #cce8f4;
+  text-align: center;
+  margin: 0.15em 0 0;
+  font-style: italic;
+  opacity: 0.8;
+}
+.gallery-links {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.4em 0 0;
+}
+.gallery-link {
+  font-size: 0.9em;
+  color: #8adbf8;
+  text-decoration: none;
+  opacity: 0.84;
+}
+.gallery-link:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
 /* LinkedIn Posts */
 #linkedin-posts {
   display: flex;

@@ -2,7 +2,8 @@
   "videos": [
     {
       "url": "https://www.youtube.com/watch?v=7qhbGsBvg4k",
-      "title": "MCP Security: Keep Your AI Agents from Spilling the Tea",
+      "title": "MCP Security",
+      "subtitle": "Keep Your AI Agents from Spilling the Tea",
       "presenters": [
         {
           "name": "Manfred Bjørlin",
@@ -13,22 +14,26 @@
           "url": ""
         }
       ],
-      "thumbnail": "mcp_sec_thumb.jpg"
+      "thumbnail": "mcp_sec_thumb.jpg",
+      "presentation": "https://slides.manfred.no/mcp-spills-the-tea"
     },
     {
       "url": "https://www.youtube.com/watch?v=pt6EYqfOTlo",
-      "title": "Event Driven Architecture: From Sms to Now, Why it Still Matters",
+      "title": "Event Driven Architecture",
+      "subtitle": "From Sms to Now, Why it Still Matters",
       "presenters": [
         {
           "name": "Manfred Bjørlin",
           "url": "https://manfred.no"
         }
       ],
-      "thumbnail": "event_driven_thumb.jpg"
+      "thumbnail": "event_driven_thumb.jpg",
+      "presentation": "https://slides.manfred.no/eda-sms-to-now"
     },
     {
       "url": "https://www.youtube.com/watch?v=iu3yWKLaY-c",
-      "title": "I choo-choo-choose you; Or How to Build Modern Platforms in a 200 Year Old Industry",
+      "title": "I choo-choo-choose you",
+      "subtitle": "Or How to Build Modern Platforms in a 200 Year Old Industry",
       "presenters": [
         {
           "name": "Manfred Bjørlin",
@@ -39,7 +44,34 @@
           "url": ""
         }
       ],
-      "thumbnail": "choo-choo_thumb.jpg"
+      "thumbnail": "choo-choo_thumb.jpg",
+      "presentation": "https://slides.manfred.no/choo-choo"
+    },
+    {
+      "url": "",
+      "title": "Did I Find the Cheatcode of DevOps?",
+      "subtitle": "Or am I just Yapping About AI?",
+      "presenters": [
+        {
+          "name": "Manfred Bjørlin",
+          "url": "https://manfred.no"
+        }
+      ],
+      "thumbnail": "ai-devops_thumb.jpg",
+      "presentation": "https://manfred.no/presentations/ai-devops.pdf"
+    },
+    {
+      "url": "",
+      "title": "Managing the Chaos",
+      "subtitle": "Not a superpower. Not a Curse. Just My Brain",
+      "presenters": [
+        {
+          "name": "Manfred Bjørlin",
+          "url": "https://manfred.no"
+        }
+      ],
+      "thumbnail": "chaos_thumb.jpg",
+      "presentation": "https://slides.manfred.no/managing-the-chaos"
     }
   ]
 }

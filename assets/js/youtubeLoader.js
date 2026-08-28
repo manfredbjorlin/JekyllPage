@@ -25,13 +25,27 @@ async function loadYouTubeVideos(jsonUrl) {
         ? `<img src="${thumbSrc}" alt="${video.title}" loading="lazy">`
         : `<div style="aspect-ratio:16/9;background:#18181c;display:flex;align-items:center;justify-content:center;color:#555;font-size:2em;">▶</div>`;
 
+      const recordingLink = video.url
+        ? `<a href="${video.url}" target="_blank" rel="noopener" class="gallery-link">🎥 Recording</a>`
+        : '';
+
+      const presentationLink = video.presentation
+        ? `<a href="${video.presentation}" target="_blank" rel="noopener" class="gallery-link">📊 Slides</a>`
+        : '';
+
+      const links = [recordingLink, presentationLink].filter(Boolean).join('');
+
+      const subtitleHtml = video.subtitle
+        ? `<div class="gallery-item-subtitle">${video.subtitle}</div>`
+        : '';
+
       return `
         <div class="gallery-item">
-          <a href="${video.url}" target="_blank" rel="noopener">
-            ${thumbHtml}
-          </a>
+          ${thumbHtml}
           <div class="gallery-title">${video.title}</div>
+          ${subtitleHtml}
           ${presenters ? `<div class="gallery-subtitle">${presenters}</div>` : ''}
+          ${links ? `<div class="gallery-links">${links}</div>` : ''}
         </div>`;
     }).join('');
   } catch (e) {

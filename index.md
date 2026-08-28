@@ -11,7 +11,7 @@ Cloud Native architect and developer with a passion for integration and automati
 </div>
 
 <div style="margin-top:1em;text-align:center;">
-  <a href="/speaks" class="jump-btn">🎥 Recorded Presentations</a>
+  <a href="/speaks" class="jump-btn">🎥 Recordings and Slides 📊</a>
 </div>
 
 <div id="latest-linkedin-section" style="margin-top:2em;">
