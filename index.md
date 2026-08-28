@@ -10,6 +10,10 @@ Cloud Native architect and developer with a passion for integration and automati
   <ul id="next-up-event"></ul>
 </div>
 
+<div style="margin-top:1em;text-align:center;">
+  <a href="/speaks" class="jump-btn">🎥 Recorded Presentations</a>
+</div>
+
 <div id="latest-linkedin-section" style="margin-top:2em;">
   <h2>💼 Latest Post</h2>
   <div id="linkedin-latest"></div>

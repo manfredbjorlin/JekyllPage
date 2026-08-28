@@ -4,14 +4,42 @@
       "url": "https://www.youtube.com/watch?v=7qhbGsBvg4k",
       "title": "MCP Security: Keep Your AI Agents from Spilling the Tea",
       "presenters": [
-        { 
+        {
           "name": "Manfred Bjørlin",
           "url": "https://manfred.no"
         },
         {
           "name": "Awar Abdulkarim",
           "url": ""
+        }
       ],
       "thumbnail": "mcp_sec_thumb.jpg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=pt6EYqfOTlo",
+      "title": "Event Driven Architecture: From Sms to Now, Why it Still Matters",
+      "presenters": [
+        {
+          "name": "Manfred Bjørlin",
+          "url": "https://manfred.no"
+        }
+      ],
+      "thumbnail": "event_driven_thumb.jpg"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=iu3yWKLaY-c",
+      "title": "I choo-choo-choose you; Or How to Build Modern Platforms in a 200 Year Old Industry",
+      "presenters": [
+        {
+          "name": "Manfred Bjørlin",
+          "url": "https://manfred.no"
+        },
+        {
+          "name": "Roberth Strand",
+          "url": ""
+        }
+      ],
+      "thumbnail": "choo-choo_thumb.jpg"
+    }
   ]
 }
