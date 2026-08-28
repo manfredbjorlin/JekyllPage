@@ -128,7 +128,7 @@
     fetch(jsonPath)
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        var posts = data && data.data && data.data.posts && data.data.posts.edges;
+        var posts = data && data.posts && data.posts.edges;
         if (posts) renderPosts(posts);
       })
       .catch(function (err) {
